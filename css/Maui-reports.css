@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#TUMaui .section.reports {
+    padding-bottom: 60px;
+}
+
+#TUMaui .left_side, 
+#TUMaui .right_side {
+	float: left;
+}
+
+#TUMaui .left_side {
+    padding-right: 2%;
+}
+
+#TUMaui .left_side,
+#TUMaui .right_side {
+	min-width: 49%;
+    width: 49%;
+}
+
+#TUMaui .progressbox {
+	background: #e5e5e4 none repeat scroll 0 0;
+    float: left;
+    margin-left: 25px;
+    margin-bottom: 100px;
+    min-height: 320px;
+    padding: 25px 12px;
+}
+
+#TUMaui .section.reports table {
+	width: 100%;
+}
+
+#TUMaui .section.reports table tr th {
+	border-bottom: 1px solid #aaa;
+	color: #333;
+	font-size: 16px;
+	font-weight: normal;
+	padding:10px;
+	text-align: left;
+	text-transform: uppercase;
+	width: 50%;
+}
+
+#TUMaui .section.reports table tr td {
+	color: #EF3F37;
+	padding: 2px;
+	width: 50%;
+}
+
+#TUMaui .section.reports table tr td a {
+	color: #EF3F37;
+	text-decoration: none;
+}
+
+#TUMaui .section.reports table tr td a:hover {
+	color: #EF3F37;
+	text-decoration: underline;
+}
+
+#TUMaui .section.reports img {
+    display: inline-block;
+    width: calc;
+}

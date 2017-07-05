@@ -1,0 +1,1329 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(reset.css);
+
+body {
+	color: #555555;
+	font-family: "lato",sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.clear::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    min-width: 320px;
+    position: relative;
+    width: 100%;
+}
+
+.section {
+    max-width: 748px;
+    padding: 0 20px 20px;
+}
+
+h1, p {
+    margin-bottom: 30px;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+h1 {
+    color: #EC018C;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.mobile {
+    display: block !important;
+}
+
+.desktop {
+    display: none !important;
+}
+
+/* HEADER */
+/* ****** */
+.header {
+    background: #FFFFFF;
+    height: 28px;
+    max-width: 1600px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header .menuButton {
+    cursor: pointer;
+    left: 20px;
+    position: absolute;
+    top: 7px;
+}
+
+.header a {
+    display: block;
+    float: right;
+    height: 14px;
+    margin-top: 7px;
+    text-indent: -9999px;
+}
+
+.header a.portalLogout {
+    background: transparent url("../images/logout-mobile.png") no-repeat scroll left bottom;
+    margin-right: 20px;
+    width: 45px;
+}
+
+.header a.portalHome {
+    background: transparent url("../images/portal-home-mobile.png") no-repeat scroll left bottom;
+    margin-right: 10px;
+    width: 64px;
+}
+
+.splash {
+    background: url('../images/header-bg.png') no-repeat scroll center top;
+    height: 233px;
+    margin-top: 28px;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+}
+
+/* TRIP PROGRESS */
+/* ************* */
+
+.tripProgress {
+    background: #EF3F37;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 50px;
+    line-height: 30px;
+    margin-bottom: 26px;
+    overflow: hidden;
+    padding: 10px 0 16px;
+    position: relative;
+}
+
+.tripProgress.open {
+    height: 50px;
+    -webkit-transition: height 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.5s;
+}
+
+.tripProgress.close {
+    height: 140px;
+    -webkit-transition: height 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.5s;
+}
+
+.tripProgress .progressContainer {
+    height: 140px;
+    margin: 0 auto;
+    max-width: 320px;
+    position: relative;
+}
+
+.tripProgress.qualified .progressContainer {
+    height: 50px;
+    max-width: none;
+}
+
+.tripProgress .toggleTripProgress {
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 7%;
+    top: -3px;
+    width: 20px;
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: transform 0.5s linear; /* For Safari 3.1 to 6.0 */
+    transition: transform 0.5s linear;
+}
+
+.tripProgress .toggleTripProgress img {
+    display: block;
+}
+
+.tripProgress .toggleTripProgress.close {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    -webkit-transition: transform 0.5s linear; /* For Safari 3.1 to 6.0 */
+    transition: transform 0.5s linear;
+}
+
+.tripProgress .myTrip {
+    line-height: normal;
+    padding: 1px 0 7px;
+    text-align: center;
+    width: 100%;
+}
+
+.tripProgress .progressWrapper {
+    clear: both;
+    width: 100%;
+}
+
+.tripProgress .progressWrapper .title {
+    float: left;
+    padding-right: 1.5%;
+    text-align: right;
+    width: 64.5%;
+}
+
+.tripProgress .progressWrapper .title.qualified {
+    font-size: 12px;
+    padding: 0 1.5%;
+    text-align: center;
+    width: 97%;
+}
+
+.tripProgress .progressWrapper .ammount {
+    float: left;
+    font-weight: bold;
+    width: 34%;
+}
+
+.tripProgress .moreDetails {
+    display: none;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    max-width: 437px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+/* SURFBOARD MENU */
+/* ************** */
+.surfboardWrapper {
+    background: rgba(68,68,68,0.6);
+    bottom: 0;
+    left: 0;
+    margin-left: -260px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 260px;
+    z-index: 50;
+}
+
+.surfboardWrapper.close {
+    margin-left: 0;
+    opacity: 1;
+    -webkit-transition: margin-left 1s, opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: margin-left 1s, opacity 1s;
+}
+
+.surfboardWrapper.open {
+    opacity: 0;
+    margin-left: -260px;
+    -webkit-transition: margin-left 1s, opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: margin-left 1s, opacity 1s;
+}
+
+.closeMobileMenu {
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: normal;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.surfboard {
+    margin: 28px auto 0;
+    position: relative;
+    width: 73%;
+}
+
+.surfboard .links {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 220px;
+    width: 120px;
+}
+
+.surfboard .links a {
+    color: #943A15;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.surfboard .links a.backToTop,
+.surfboard .links a.home {
+    margin-bottom: 16px;
+}
+
+.surfboard .links a.backToTop,
+.surfboard .links a.reports {
+    display: none;
+}
+
+.surfboard .links a:hover {
+    color: #CF0006;
+}
+
+
+/* THANK YOU */
+/* ********* */
+.thankYou p {
+    font-style: italic;
+}
+
+.thankYou p.name {
+    margin-bottom: 0;
+}
+
+.thankYou .signature {
+    margin-top: -20px;
+    max-width: 140px;
+}
+
+.thankYou p.name span {
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* MOTION */
+/* ****** */
+.section.motion {
+    margin: 0 auto;
+    max-width: 596px;
+    padding: 108px 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.section.motion.waves {
+    padding: 104px 0 60px;
+}
+
+.section.motion .flowers {
+    position: absolute;
+    width: 150px;
+    z-index: 100;
+}
+
+.section.motion.hammock .flowers {
+    right: 20px;
+    top: 0;
+}
+
+.section.motion.waves .flowers {
+    left: 0px;
+    top: -18px;
+}
+
+.section.motion .hammockVidoe img,
+.section.motion .wavesVideo img {
+    width: 100%;
+}
+
+/* ACTIVITIES */
+/* ********** */
+.section.activities {
+    background: url('../images/gray-floral-vertical.png') no-repeat scroll center top;
+    padding: 48px 0;
+}
+
+.activitiesWrapper {
+    margin: 0 auto;
+    max-width: 372px;
+    overflow: auto;
+    width: 100%;
+}
+
+.activityDescription,
+.activityImage,
+.spacer {
+    float: left;
+    height: 170px;
+    width: 50%;
+}
+
+.spacer {
+    width: 32.5%;
+}
+
+.activityDescription {
+    background-color: #EF3F37;
+}
+
+.activityDescription .floatRight {
+    float: right;
+}
+
+.activityDescription .floatLeft {
+    float: left;
+}
+
+.activityDescription div {
+    background: #EF3F37 url('../images/activities-flower.png') no-repeat scroll left top;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 9px;
+    width: 142px;
+}
+
+.activityDescription div span {
+    display: block;
+    padding-left: 18px;
+}
+
+.activityDescription .activity {
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 18px;
+}
+
+.activityDescription .description {
+    font-style: italic;
+    line-height: 20px;
+}
+
+.activityImage {
+    overflow: hidden;
+    position: relative;
+}
+
+.activitiesWrapper .activityImage img {
+    max-width: none;
+    position: absolute;
+}
+
+.activitiesWrapper.bike .activityImage img {
+    animation: bike-kenburns 15s ease infinite;
+    -ms-animation: bike-kenburns 15s ease infinite;
+    -webkit-animation: bike-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: bike-kenburns 15s ease infinite;
+    -moz-animation: bike-kenburns 15s ease infinite;
+    left: -10px;
+    top: -10px;
+}
+
+@keyframes bike-kenburns {
+    0% {
+        transform: scale(1.1) rotate(0.0deg);
+        -ms-transform: scale(1.1) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(1.1) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(1.1) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(1.1) rotate(0.0deg); /* Firefox */
+    }
+    50% {
+        transform: scale(1.0) rotate(0.1deg);
+        -ms-transform: scale(1.0) rotate(0.1deg);
+        -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(1.1) rotate(0.0deg);
+        -ms-transform: scale(1.1) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(1.1) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(1.1) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(1.1) rotate(0.0deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.zipline .activityImage img {
+    animation: zipline-kenburns 15s ease infinite;
+    -ms-animation: zipline-kenburns 15s ease infinite;
+    -webkit-animation: zipline-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: zipline-kenburns 15s ease infinite;
+    -moz-animation: zipline-kenburns 15s ease infinite;
+    left: -60px;
+    top: -10px;
+}
+
+@keyframes zipline-kenburns {
+    0% {
+        transform: scale(0.9) rotate(0.0deg);
+        -ms-transform: scale(0.9) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.9) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.9) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.9) rotate(0.0deg); /* Firefox */
+    }
+    50% {
+        transform: scale(1.0) rotate(0.1deg);
+        -ms-transform: scale(1.0) rotate(0.1deg);
+        -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(0.9) rotate(0.0deg);
+        -ms-transform: scale(0.9) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.9) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.9) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.9) rotate(0.0deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.golf .activityImage img {
+    animation: golf-kenburns 15s ease infinite;
+    -ms-animation: golf-kenburns 15s ease infinite;
+    -webkit-animation: golf-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: golf-kenburns 15s ease infinite;
+    -moz-animation: golf-kenburns 15s ease infinite;
+    left: 0px;
+    top: -20px;
+}
+
+@keyframes golf-kenburns {
+    0% {
+        transform: scale(1.1) rotate(0.0deg);
+        -ms-transform: scale(1.1) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(1.1) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(1.1) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(1.1) rotate(0.0deg); /* Firefox */
+    }
+    50% {
+        transform: scale(1.2) rotate(0.1deg);
+        -ms-transform: scale(1.2) rotate(0.1deg); /* IE 9 */
+        -webkit-transform: scale(1.2) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.2) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.2) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(1.1) rotate(0.0deg);
+        -ms-transform: scale(1.1) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(1.1) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(1.1) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(1.1) rotate(0.0deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.snorkle .activityImage img {
+    animation: snorkle-kenburns 15s ease infinite;
+    -ms-animation: snorkle-kenburns 15s ease infinite;
+    -webkit-animation: snorkle-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: snorkle-kenburns 15s ease infinite;
+    -moz-animation: snorkle-kenburns 15s ease infinite;
+    right: -60%;
+    top: -30px;
+}
+
+@keyframes snorkle-kenburns {
+    0% {
+        transform: scale(0.8) rotate(0.0deg);
+        -ms-transform: scale(0.8) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.8) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.8) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.8) rotate(0.0deg); /* Firefox */
+    }
+    50% {
+        transform: scale(0.9) rotate(0.1deg);
+        -ms-transform: scale(0.9) rotate(0.1deg); /* IE 9 */
+        -webkit-transform: scale(0.9) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(0.9) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(0.9) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(0.8) rotate(0.0deg);
+        -ms-transform: scale(0.8) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.8) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.8) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.8) rotate(0.0deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.hike .activityImage img {
+    animation: hike-kenburns 15s ease infinite;
+    -ms-animation: hike-kenburns 15s ease infinite;
+    -webkit-animation: hike-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: hike-kenburns 15s ease infinite;
+    -moz-animation: hike-kenburns 15s ease infinite;
+    right: -70px;
+    bottom: -70px;
+}
+
+@keyframes hike-kenburns {
+    0% {
+        transform: scale(0.85) rotate(0.0deg);
+        -ms-transform: scale(0.85) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.85) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.85) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.85) rotate(0.0deg); /* Firefox */
+    }
+    50% {
+        transform: scale(0.75) rotate(0.1deg);
+        -ms-transform: scale(0.75) rotate(0.1deg); /* IE 9 */
+        -webkit-transform: scale(0.75) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(0.75) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(0.75) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(0.85) rotate(0.0deg);
+        -ms-transform: scale(0.85) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(0.85) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(0.85) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(0.85) rotate(0.0deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.spa .activityImage img {
+    animation: spa-kenburns 15s ease infinite;
+    -ms-animation: spa-kenburns 15s ease infinite;
+    -webkit-animation: spa-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: spa-kenburns 15s ease infinite;
+    -moz-animation: spa-kenburns 15s ease infinite;
+    left: -50px;
+    bottom: 0px;
+}
+
+@keyframes spa-kenburns {
+    0% {
+        transform: scale(1.0) rotate(0.1deg);
+        -ms-transform: scale(1.0) rotate(0.1deg);
+        -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+    }
+    50% {
+        transform: scale(1.1) rotate(0.0deg);
+        -ms-transform: scale(1.1) rotate(0.0deg); /* IE 9 */
+        -webkit-transform: scale(1.1) rotate(0.0deg); /* Safari and Chrome */
+        -o-transform: scale(1.1) rotate(0.0deg); /* Opera */
+        -moz-transform: scale(1.1) rotate(0.0deg); /* Firefox */
+    }
+    100% {
+        transform: scale(1.0) rotate(0.1deg);
+        -ms-transform: scale(1.0) rotate(0.1deg);
+        -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+    }
+}
+
+.activitiesWrapper.sail .activityImage img {
+    animation: sail-kenburns 15s ease infinite;
+    -ms-animation: sail-kenburns 15s ease infinite;
+    -webkit-animation: sail-kenburns 15s ease infinite; /* Safari 4.0 - 8.0 */
+    -o-animation: sail-kenburns 15s ease infinite;
+    -moz-animation: sail-kenburns 15s ease infinite;
+    left: -20px;
+    bottom: -20px;
+}
+
+@keyframes sail-kenburns {
+    0% {
+        transform: scale(0.9) rotate(0.1deg);
+        -ms-transform: scale(0.9) rotate(0.1deg); /* IE 9 */
+        -webkit-transform: scale(0.9) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(0.9) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(0.9) rotate(0.1deg); /* Firefox */
+    }
+    50% {
+        transform: scale(1.0) rotate(0.1deg);
+        -ms-transform: scale(1.0) rotate(0.1deg);
+        -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+    }
+    100% {
+        transform: scale(0.9) rotate(0.1deg);
+        -ms-transform: scale(0.9) rotate(0.1deg); /* IE 9 */
+        -webkit-transform: scale(0.9) rotate(0.1deg); /* Safari and Chrome */
+        -o-transform: scale(0.9) rotate(0.1deg); /* Opera */
+        -moz-transform: scale(0.9) rotate(0.1deg); /* Firefox */
+    }
+}
+
+/* HOTEL */
+/* ***** */
+.section.hotel.upper {
+    padding-bottom: 35px;
+}
+
+.section.hotel.lower {
+    padding-bottom: 60px;
+}
+
+.section.hotel h1 {
+    margin-bottom: 0;
+}
+
+.section.hotel .hotelName {
+    font-style: italic;
+}
+
+.section.hotel a {
+    color: #0D5FC6;
+}
+
+/* SLIDESHOW */
+/* ********* */
+
+.swiper-container {
+    height: auto;
+    margin-bottom: 35px;
+    max-width: 748px;
+    width: 100%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    background: rgba(239, 63, 55, 0.86);
+    bottom: 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(250, 250, 250, 0.45);
+    opacity: 1;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 13.5px 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: rgba(250, 250, 250, 1);
+}
+
+.swiper-container img {
+    height: 100%;
+    display: block;
+    width: 100%;
+    max-width: inherit;
+}
+
+.swiper-button-prev {
+    background-image: url('../images/swiper-left-arrow.png');
+    left: 15px;
+}
+
+.swiper-button-next {
+    background-image: url('../images/swiper-right-arrow.png');
+    right: 15px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-size: 10px 16px;
+    bottom: -6px;
+    top: auto;
+}
+
+/* QUOTE */
+/* ***** */
+.section.quote {
+    padding-bottom: 50px;
+}
+
+.section.quote img {
+    margin: 0 auto;
+}
+
+
+/* FOOTER */
+/* ****** */
+.footer {
+    background: #EF3F37;
+    color: #FFFFFF;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.footer img {
+    display: block;
+    margin: 0 auto 12px;
+    width: 155px;
+}
+
+
+@media (min-width: 500px) {
+
+    .tripProgress .progressWrapper .title.qualified {
+        font-size: 17px;
+        line-height: normal;
+    }
+}
+
+
+@media (min-width: 700px) {
+    
+    .mobile {
+        display: none !important;
+    }
+
+    .desktop {
+        display: block !important;
+    }
+    
+    .tripProgress a.desktop {
+        color: #FFFFFF;
+        display: inline !important;
+    }
+    
+    .header {
+        height: 32px;
+    }
+
+    .header a.portalLogout {
+        background: transparent url("../images/logout-desktop.png") no-repeat scroll left bottom;
+        height: 18px;
+        margin-top: 7px;
+        width: 60px;
+    }
+
+    .header a.portalHome {
+        background: transparent url("../images/portal-home-desktop.png") no-repeat scroll left bottom;
+        height: 19px;
+        margin-top: 6.5px;
+        width: 86px;
+    }
+    
+    .contentWrapper {
+        margin: 0 auto;
+        max-width: 997px;
+        overflow: visible;
+        position: relative;
+        width: 100%;
+    }
+    
+    .surfboardWrapper {
+        background: transparent;
+        display: block !important;
+        margin-top: 130px;
+        padding-top: 0;
+        width: 29%;
+    }
+    
+    .surfboard.fixed {
+        bottom: 330px;
+        position: absolute;
+        right: 0;
+        top: auto !important;
+    }
+    
+    .surfboard .links a {
+        margin-bottom: 12px;
+    }
+    
+    .surfboard .links a.backToTop {
+        display: block !important;
+    }
+    
+    .surfboardWrapper.close,
+    .surfboardWrapper.open {
+        margin-left: 0 !important;
+        opacity: 1 !important;
+    }
+    
+    .closeMobileMenu {
+        display: none !important;
+    }
+    
+    .surfboard {
+        float: right;
+        margin-top: 0;
+        text-align: center;
+        width: 183px;
+    }
+    
+    .surfboard .links {
+        top: 200px;
+    }
+    
+    .tripProgress {
+        font-size: 15px;
+        margin-bottom: 54px;
+        padding: 16px 0;
+    }
+    
+    .tripProgress.open {
+        height: 20px;
+    }
+    
+    .tripProgress.close {
+        height: 180px;
+    }
+    
+    .tripProgress .toggleTripProgress {
+        left: 430px;
+        right: 0;
+        top: -2px;
+    }
+    
+    .tripProgress .progressContainer {
+        margin: 0;
+        max-width: inherit;
+    }
+    
+    .tripProgress.qualified .progressContainer {
+        height: 20px;
+        padding: 0;
+    }
+    
+    .tripProgress .myTrip {
+        float: left;
+        width: auto;
+    }
+    
+    .tripProgress .progressWrapper:before {
+        content: "|";
+        display: block;
+        float: left;
+        padding: 0 8px;
+    }
+    
+    .tripProgress .progressWrapper {
+        clear: none;
+        float: left;
+        line-height: normal;
+        width: 300px;
+    }
+    
+    .tripProgress .progressWrapper.qualified {
+        width: 317px;
+    }
+    
+    .tripProgress .progressWrapper .title,
+    .tripProgress .progressWrapper .title.qualified {
+        float: left;
+        padding-right: 4px;
+        text-align: left;
+        width: auto;
+    }
+    
+    .tripProgress .progressWrapper .title.qualified {
+        font-size: 12px;
+        line-height: 24px;
+        padding: 0;
+    }
+    
+    .tripProgress .progressWrapper .ammount {
+        width: auto;
+    }
+    
+    .tripProgress .progress .progressWrapper {
+        clear: both;
+        line-height: 37px;
+        margin-left: 137px;
+    }
+    
+    .tripProgress .moreDetails {
+        display: block;
+    }
+    
+    .tripProgress.qualified .moreDetails {
+        display: none !important;
+    }
+    
+    .tripProgress .progressContainer,
+    .swiper-container,
+    .section {
+        float: right;
+        padding-bottom: 40px;
+        padding-right: 3%;
+        width: 65%;
+    }
+    
+    .section.activities {
+        background: url('../images/gray-floral-vertical.png') repeat-x scroll -120px top;
+        margin: 0 3% 20px 20px;
+        padding: 0;
+    }
+    
+    .activitiesWrapper {
+        margin-bottom: 1px;
+        max-width: none;
+    }
+    
+    .activityDescription {
+        width: 35%;
+    }
+    
+    .activityImage {
+        width: 32.5%;
+    }
+    
+    .activityDescription .floatRight,
+    .activityDescription .floatLeft {
+        float: none;
+        margin: 9px auto;
+    }
+    
+    .activitiesWrapper.zipline .activityImage img {
+        left: -50px;
+    }
+    
+    .activitiesWrapper.snorkle .activityImage img {
+        right: -31%;
+    }
+    
+    .section.motion {
+        margin: -30px 3% 0 0;
+        padding: 88px 0 60px;
+    }
+    
+    .section.motion.waves {
+        margin-top: 30px;
+    }
+    
+    .section.hotel.upper {
+        padding-bottom: 50px;
+    }
+    
+    .section.hotel .hotelName {
+        font-size: 19px;
+    }
+    
+    .swiper-container {
+        margin-bottom: 60px;
+        margin-right: 3%;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+        height: 10px;
+        margin: 20px 6.5px;
+        width: 10px;
+    }
+    
+    .swiper-button-prev {
+        background-size: 15px 24px;
+    }
+
+    .swiper-button-next {
+        background-size: 15px 24px;
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        bottom: 3px;
+    }
+    
+    .section.quote {
+        float: none;
+        margin: 0 auto;
+        padding: 0 3% 50px;
+        width: 94%;
+    }
+
+    .footer {
+        clear: both;
+        padding: 50px 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 733px) {
+    .surfboard .links a.reports {
+        display: block !important;
+    }
+}
+    
+@media (min-width: 800px) {
+    .tripProgress .progressWrapper.qualified {
+        width: 375px;
+    }
+    
+    .tripProgress .progressWrapper .title.qualified {
+        font-size: 14px;
+    }
+}
+    
+@media (min-width: 850px) {
+    .activityDescription {
+        width: 29%;
+    }
+    
+    .activityImage,
+    .spacer {
+        width: 35.5%;
+    }
+    
+    .activitiesWrapper.hike .activityImage img {
+        animation: hike-kenburns-850 15s ease infinite;
+        -ms-animation: hike-kenburns-850 15s ease infinite;
+        -webkit-animation: hike-kenburns-850 15s ease infinite; /* Safari 4.0 - 8.0 */
+        -o-animation: hike-kenburns-850 15s ease infinite;
+        -moz-animation: hike-kenburns-850 15s ease infinite;
+        right: -30px;
+    }
+    
+    
+    
+    @keyframes hike-kenburns-850 {
+        0% {
+            transform: scale(0.95) rotate(0.0deg);
+            -ms-transform: scale(0.95) rotate(0.0deg); /* IE 9 */
+            -webkit-transform: scale(0.95) rotate(0.0deg); /* Safari and Chrome */
+            -o-transform: scale(0.95) rotate(0.0deg); /* Opera */
+            -moz-transform: scale(0.95) rotate(0.0deg); /* Firefox */
+        }
+        50% {
+            transform: scale(0.85) rotate(0.1deg);
+            -ms-transform: scale(0.85) rotate(0.1deg); /* IE 9 */
+            -webkit-transform: scale(0.85) rotate(0.1deg); /* Safari and Chrome */
+            -o-transform: scale(0.85) rotate(0.1deg); /* Opera */
+            -moz-transform: scale(0.85) rotate(0.1deg); /* Firefox */
+        }
+        100% {
+            transform: scale(0.95) rotate(0.0deg);
+            -ms-transform: scale(0.95) rotate(0.0deg); /* IE 9 */
+            -webkit-transform: scale(0.95) rotate(0.0deg); /* Safari and Chrome */
+            -o-transform: scale(0.95) rotate(0.0deg); /* Opera */
+            -moz-transform: scale(0.95) rotate(0.0deg); /* Firefox */
+        }
+    }
+    
+    .section.motion.hammock,
+    .section.motion.waves {
+        margin: 0 3% 0 20px;
+        padding: 62px 0 70px;
+    }
+    
+    .section.motion .flowers {
+        width: 240px;
+    }
+    
+    .section.motion.hammock .flowers {
+        left: -160px;
+        right: auto;
+        top: 10%;
+    }
+    
+    .section.motion.waves {
+        padding-right: 15%;
+    }
+    
+    .section.motion.waves .flowers {
+        left: auto;
+        right: 0;
+        top: 90px;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 21px;
+    }
+    
+    p {
+        font-size: 17px;
+    }
+    
+    .splash {
+        height: 380px;
+    }
+    
+    .logo img {
+        width: auto;
+    }
+    
+    .surfboardWrapper {
+        margin-top: 280px;
+        width: 21%;
+    }
+    
+    .tripProgress {
+        font-size: 17px;
+    }
+    
+    .tripProgress .toggleTripProgress {
+        left: auto;
+        top: 0;
+    }
+    
+    .tripProgress .progressContainer {
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 500px;
+    }
+    
+    .tripProgress.qualified .progressContainer {
+        float: right;
+        max-width: 748px;
+        width: 100%;
+    }
+    
+    .tripProgress .progressWrapper {
+        width: 320px;
+    }
+    
+    .tripProgress .progressWrapper.qualified {
+        width: 425px;
+    }
+    
+    .tripProgress .progressWrapper .title.qualified {
+        font-size: 16px;
+    }
+    
+    .tripProgress .progress .progressWrapper {
+        margin-left: 155px;
+    }
+    
+    .tripProgress .moreDetails {
+        max-width: inherit;
+    }
+    
+    .section,
+    .swiper-container {
+        padding: 0 20px 0 0;
+        width: 100%;
+    }
+    
+    .section.motion.hammock {
+        padding: 125px 0 152px;
+    }
+    
+    .section.motion.waves {
+        padding: 150px 325px 170px 0;
+    }
+    
+    .section.motion.hammock .flowers {
+        left: -350px;
+        width: 385px;
+    }
+    
+    .section.motion.waves .flowers {
+        width: 390px;
+    }
+    
+    .section.soakSun {
+        padding-bottom: 40px;
+    }
+    .section.activities {
+        background: rgba(0, 0, 0, 0) url("../images/gray-floral-vertical.png") repeat-x scroll -60px top;
+    }
+    
+    .activitiesWrapper.zipline .activityImage img {
+        left: auto;
+        right: -17px;
+        top: -12px;
+    }
+    
+    .activitiesWrapper.snorkle .activityImage img {
+        right: -17%;
+    }
+    
+    .activitiesWrapper.hike .activityImage img {
+        animation: hike-kenburns-1000 15s ease infinite;
+        -ms-animation: hike-kenburns-1000 15s ease infinite;
+        -webkit-animation: hike-kenburns-1000 15s ease infinite; /* Safari 4.0 - 8.0 */
+        -o-animation: hike-kenburns-1000 15s ease infinite;
+        -moz-animation: hike-kenburns-1000 15s ease infinite;
+        right: -20px;
+    }
+        
+    @keyframes hike-kenburns-1000 {
+        0% {
+            transform: scale(1.0) rotate(0.1deg);
+            -ms-transform: scale(1.0) rotate(0.1deg);
+            -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+            -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+            -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+        }
+        50% {
+            transform: scale(0.9) rotate(0.1deg);
+            -ms-transform: scale(0.9) rotate(0.1deg); /* IE 9 */
+            -webkit-transform: scale(0.9) rotate(0.1deg); /* Safari and Chrome */
+            -o-transform: scale(0.9) rotate(0.1deg); /* Opera */
+            -moz-transform: scale(0.9) rotate(0.1deg); /* Firefox */
+        }
+        100% {
+            transform: scale(1.0) rotate(0.1deg);
+            -ms-transform: scale(1.0) rotate(0.1deg);
+            -webkit-transform: scale(1.0) rotate(0.1deg); /* Safari and Chrome */
+            -o-transform: scale(1.0) rotate(0.1deg); /* Opera */
+            -moz-transform: scale(1.0) rotate(0.1deg); /* Firefox */
+        }
+    }
+    
+    .activitiesWrapper.spa .activityImage img {
+        left: -10px;
+    }
+    
+    .swiper-container {
+        padding: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .surfboardWrapper {
+        width: 24%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .surfboardWrapper {
+        width: 26%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .surfboardWrapper {
+        width: 28%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .surfboardWrapper {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .surfboardWrapper {
+        width: 31%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .surfboardWrapper {
+        width: 31.8%;
+    }
+}
